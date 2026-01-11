@@ -2,6 +2,13 @@
 
 一个使用 SwiftUI 开发的复古像素风贪吃蛇游戏，采用 MVVM 架构模式。
 
+## 📸 游戏截图
+
+<p align="center">
+  <img src="screenshots/game-playing.png" alt="游戏进行中" width="300"/>
+  <img src="screenshots/game-over.png" alt="游戏结束" width="300"/>
+</p>
+
 ## ✨ 特性
 
 - 🎮 **复古像素风设计** - 绿屏终端主题，荧光绿蛇身 + 红色食物
