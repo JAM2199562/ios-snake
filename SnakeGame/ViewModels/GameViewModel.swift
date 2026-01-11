@@ -82,6 +82,17 @@ class GameViewModel: ObservableObject {
         direction = newDirection
     }
 
+    /// 切换暂停状态
+    func togglePause() {
+        if gameState == .running {
+            gameState = .paused
+            stopTimer()
+        } else if gameState == .paused {
+            gameState = .running
+            startTimer()
+        }
+    }
+
     // MARK: - 私有辅助方法
 
     /// 在随机位置生成食物（确保不与蛇身重叠）
