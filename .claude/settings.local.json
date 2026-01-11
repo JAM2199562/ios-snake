@@ -14,7 +14,8 @@
       "Bash(tree:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(chmod:*)"
     ]
   }
 }
