@@ -12,7 +12,7 @@ struct GameView: View {
                 HStack {
                     Text("分数: \(viewModel.score)")
                         .font(.system(.title2, design: .monospaced))
-                        .foregroundColor(Color(hex: "00FF00"))
+                        .foregroundColor(themeManager.currentTheme.textColor)
 
                     Spacer()
 
