@@ -68,6 +68,21 @@ struct GameView: View {
                                 }
                             }
                         }
+
+                        // 虚拟十字键（仅在游戏进行中显示）
+                        if viewModel.gameState == .running {
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Spacer()
+                                    ControlPadView { direction in
+                                        viewModel.changeDirection(direction)
+                                    }
+                                    .padding(.trailing, 20)
+                                    .padding(.bottom, 80)
+                                }
+                            }
+                        }
                     }
                     .gesture(swipeGesture)
                     .onTapGesture {
