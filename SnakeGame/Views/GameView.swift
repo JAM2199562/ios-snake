@@ -71,6 +71,25 @@ struct GameView: View {
                             }
                         }
 
+                        // 暂停提示
+                        if viewModel.gameState == .paused {
+                            ZStack {
+                                Color.black.opacity(0.7)
+
+                                VStack(spacing: 20) {
+                                    Text("PAUSED")
+                                        .font(.system(size: 40, weight: .bold, design: .monospaced))
+                                        .foregroundColor(themeManager.currentTheme.textColor)
+
+                                    Text("点击中央按钮继续")
+                                        .font(.system(size: 16, design: .monospaced))
+                                        .foregroundColor(themeManager.currentTheme.textColor)
+                                        .opacity(0.7)
+                                }
+                            }
+                            .ignoresSafeArea()
+                        }
+
                         // 倒数动画
                         if let countdown = viewModel.countdownNumber {
                             ZStack {
