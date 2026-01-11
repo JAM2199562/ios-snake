@@ -76,7 +76,7 @@ struct GameView: View {
                     }
                 }
             }
-            .background(Color(hex: "000000"))
+            .background(themeManager.currentTheme.backgroundColor)
         }
     }
 
