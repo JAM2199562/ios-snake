@@ -17,13 +17,14 @@ struct GameView: View {
 
                     Spacer()
 
-                    // 临时开始按钮（调试用）
-                    Button("START") {
-                        print("🔘 按钮点击！")
-                        viewModel.startGame()
+                    // 设置按钮
+                    Button(action: {
+                        showSettings = true
+                    }) {
+                        Image(systemName: "gearshape.fill")
+                            .font(.title2)
+                            .foregroundColor(themeManager.currentTheme.textColor)
                     }
-                    .foregroundColor(Color(hex: "00FF00"))
-                    .font(.system(.body, design: .monospaced))
                 }
                 .padding()
                 .frame(height: 44)
