@@ -3,6 +3,7 @@ import SwiftUI
 /// 游戏网格渲染视图
 struct GridView: View {
     @ObservedObject var viewModel: GameViewModel
+    @EnvironmentObject var themeManager: ThemeManager
     let size: CGSize
 
     // 计算每个格子的像素大小
