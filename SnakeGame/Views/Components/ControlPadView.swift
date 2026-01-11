@@ -4,8 +4,10 @@ import SwiftUI
 struct ControlPadView: View {
     @EnvironmentObject var themeManager: ThemeManager
     let onDirectionChange: (Direction) -> Void
+    let onPauseToggle: () -> Void
 
     @State private var pressedDirection: Direction?
+    @State private var isPausePressing = false
 
     var body: some View {
         ZStack {
