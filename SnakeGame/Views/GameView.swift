@@ -84,15 +84,20 @@ struct GameView: View {
                             .ignoresSafeArea()
                         }
 
-                        // 虚拟十字键（仅在游戏进行中显示）
-                        if viewModel.gameState == .running {
+                        // 虚拟十字键（仅在游戏进行中或暂停时显示）
+                        if viewModel.gameState == .running || viewModel.gameState == .paused {
                             VStack {
                                 Spacer()
                                 HStack {
                                     Spacer()
-                                    ControlPadView { direction in
-                                        viewModel.changeDirection(direction)
-                                    }
+                                    ControlPadView(
+                                        onDirectionChange: { direction in
+                                            viewModel.changeDirection(direction)
+                                        },
+                                        onPauseToggle: {
+                                            viewModel.togglePause()
+                                        }
+                                    )
                                     .padding(.trailing, 80)
                                     .padding(.bottom, 80)
                                 }
