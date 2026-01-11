@@ -41,13 +41,37 @@ class GameViewModel: ObservableObject {
         // 重置游戏状态
         direction = .right
         score = 0
-        gameState = .running
+        gameState = .ready
 
         // 生成第一个食物
         spawnFood()
 
-        // 启动游戏循环
-        startTimer()
+        // 开始倒数动画
+        startCountdown()
+    }
+
+    /// 开始倒数动画
+    private func startCountdown() {
+        countdownNumber = 3
+
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] timer in
+            guard let self = self else {
+                timer.invalidate()
+                return
+            }
+
+            if let count = self.countdownNumber {
+                if count > 1 {
+                    self.countdownNumber = count - 1
+                } else {
+                    // 倒数结束，开始游戏
+                    self.countdownNumber = nil
+                    self.gameState = .running
+                    self.startTimer()
+                    timer.invalidate()
+                }
+            }
+        }
     }
 
     /// 改变蛇的移动方向（防止 180 度反向转弯）
