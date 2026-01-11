@@ -14,6 +14,7 @@ class GameViewModel: ObservableObject {
     @Published var gameState: GameState = .ready
     @Published var score: Int = 0
     @Published var countdownNumber: Int? = nil
+    @Published var highScore: Int = 0
 
     // MARK: - 私有属性
     private var timer: AnyCancellable?
