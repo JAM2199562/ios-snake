@@ -11,9 +11,16 @@ struct GameView: View {
             VStack(spacing: 0) {
                 // 顶部分数栏
                 HStack {
-                    Text("分数: \(viewModel.score)")
-                        .font(.system(.title2, design: .monospaced))
-                        .foregroundColor(themeManager.currentTheme.textColor)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("分数: \(viewModel.score)")
+                            .font(.system(.title2, design: .monospaced))
+                            .foregroundColor(themeManager.currentTheme.textColor)
+
+                        Text("最高: \(viewModel.highScore)")
+                            .font(.system(.caption, design: .monospaced))
+                            .foregroundColor(themeManager.currentTheme.textColor)
+                            .opacity(0.7)
+                    }
 
                     Spacer()
 
@@ -27,7 +34,7 @@ struct GameView: View {
                     }
                 }
                 .padding()
-                .frame(height: 44)
+                .frame(height: 60)
                 .background(themeManager.currentTheme.backgroundColor)
 
                 // 游戏网格区域
