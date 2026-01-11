@@ -160,6 +160,11 @@ class GameViewModel: ObservableObject {
 
     #if DEBUG
     // MARK: - 测试辅助方法
+    func stopTimer() {
+        timer?.cancel()
+        timer = nil
+    }
+
     func updateGameManually() {
         updateGame()
     }

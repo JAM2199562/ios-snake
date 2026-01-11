@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AE19C132F141F1900DC6A53 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C052F141F1900DC6A53 /* GameState.swift */; };
+		3AE19C142F141F1900DC6A53 /* ControlPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C0D2F141F1900DC6A53 /* ControlPadView.swift */; };
+		3AE19C152F141F1900DC6A53 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C082F141F1900DC6A53 /* Color+Hex.swift */; };
+		3AE19C162F141F1900DC6A53 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C092F141F1900DC6A53 /* Theme.swift */; };
+		3AE19C172F141F1900DC6A53 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C0B2F141F1900DC6A53 /* GameViewModel.swift */; };
+		3AE19C182F141F1900DC6A53 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C102F141F1900DC6A53 /* GridView.swift */; };
+		3AE19C192F141F1900DC6A53 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C112F141F1900DC6A53 /* SettingsView.swift */; };
+		3AE19C1A2F141F1900DC6A53 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C042F141F1900DC6A53 /* Direction.swift */; };
+		3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C062F141F1900DC6A53 /* Point.swift */; };
+		3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C0F2F141F1900DC6A53 /* GameView.swift */; };
+		3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C022F141F1900DC6A53 /* SnakeGameApp.swift */; };
 		A1000001 /* SnakeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* SnakeGameApp.swift */; };
 		A1000002 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* Point.swift */; };
 		A1000003 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Direction.swift */; };
@@ -18,6 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AE19C022F141F1900DC6A53 /* SnakeGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeGameApp.swift; sourceTree = "<group>"; };
+		3AE19C042F141F1900DC6A53 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		3AE19C052F141F1900DC6A53 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		3AE19C062F141F1900DC6A53 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		3AE19C082F141F1900DC6A53 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		3AE19C092F141F1900DC6A53 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3AE19C0B2F141F1900DC6A53 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		3AE19C0D2F141F1900DC6A53 /* ControlPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPadView.swift; sourceTree = "<group>"; };
+		3AE19C0F2F141F1900DC6A53 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		3AE19C102F141F1900DC6A53 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		3AE19C112F141F1900DC6A53 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A2000001 /* SnakeGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeGameApp.swift; sourceTree = "<group>"; };
 		A2000002 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		A2000003 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -40,6 +62,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AE19C032F141F1900DC6A53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C022F141F1900DC6A53 /* SnakeGameApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3AE19C072F141F1900DC6A53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C042F141F1900DC6A53 /* Direction.swift */,
+				3AE19C052F141F1900DC6A53 /* GameState.swift */,
+				3AE19C062F141F1900DC6A53 /* Point.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AE19C0A2F141F1900DC6A53 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C082F141F1900DC6A53 /* Color+Hex.swift */,
+				3AE19C092F141F1900DC6A53 /* Theme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3AE19C0C2F141F1900DC6A53 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C0B2F141F1900DC6A53 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3AE19C0E2F141F1900DC6A53 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C0D2F141F1900DC6A53 /* ControlPadView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3AE19C122F141F1900DC6A53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AE19C0E2F141F1900DC6A53 /* Components */,
+				3AE19C0F2F141F1900DC6A53 /* GameView.swift */,
+				3AE19C102F141F1900DC6A53 /* GridView.swift */,
+				3AE19C112F141F1900DC6A53 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A5000001 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +127,11 @@
 		A5000002 /* SnakeGame */ = {
 			isa = PBXGroup;
 			children = (
+				3AE19C032F141F1900DC6A53 /* App */,
+				3AE19C072F141F1900DC6A53 /* Models */,
+				3AE19C0A2F141F1900DC6A53 /* Utilities */,
+				3AE19C0C2F141F1900DC6A53 /* ViewModels */,
+				3AE19C122F141F1900DC6A53 /* Views */,
 				A5000004 /* App */,
 				A5000005 /* Models */,
 				A5000006 /* ViewModels */,
@@ -183,6 +264,17 @@
 				A1000002 /* Point.swift in Sources */,
 				A1000003 /* Direction.swift in Sources */,
 				A1000004 /* GameState.swift in Sources */,
+				3AE19C132F141F1900DC6A53 /* GameState.swift in Sources */,
+				3AE19C142F141F1900DC6A53 /* ControlPadView.swift in Sources */,
+				3AE19C152F141F1900DC6A53 /* Color+Hex.swift in Sources */,
+				3AE19C162F141F1900DC6A53 /* Theme.swift in Sources */,
+				3AE19C172F141F1900DC6A53 /* GameViewModel.swift in Sources */,
+				3AE19C182F141F1900DC6A53 /* GridView.swift in Sources */,
+				3AE19C192F141F1900DC6A53 /* SettingsView.swift in Sources */,
+				3AE19C1A2F141F1900DC6A53 /* Direction.swift in Sources */,
+				3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */,
+				3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */,
+				3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */,
 				A1000005 /* GameViewModel.swift in Sources */,
 				A1000006 /* GameView.swift in Sources */,
 				A1000007 /* GridView.swift in Sources */,
