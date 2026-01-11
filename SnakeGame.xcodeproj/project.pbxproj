@@ -18,14 +18,6 @@
 		3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C062F141F1900DC6A53 /* Point.swift */; };
 		3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C0F2F141F1900DC6A53 /* GameView.swift */; };
 		3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C022F141F1900DC6A53 /* SnakeGameApp.swift */; };
-		A1000001 /* SnakeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* SnakeGameApp.swift */; };
-		A1000002 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* Point.swift */; };
-		A1000003 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Direction.swift */; };
-		A1000004 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004 /* GameState.swift */; };
-		A1000005 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005 /* GameViewModel.swift */; };
-		A1000006 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006 /* GameView.swift */; };
-		A1000007 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000007 /* GridView.swift */; };
-		A1000008 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000008 /* Color+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +32,6 @@
 		3AE19C0F2F141F1900DC6A53 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3AE19C102F141F1900DC6A53 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		3AE19C112F141F1900DC6A53 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A2000001 /* SnakeGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeGameApp.swift; sourceTree = "<group>"; };
-		A2000002 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		A2000003 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		A2000004 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
-		A2000005 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		A2000006 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		A2000007 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		A2000008 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		A3000001 /* SnakeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnakeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,11 +116,6 @@
 				3AE19C0A2F141F1900DC6A53 /* Utilities */,
 				3AE19C0C2F141F1900DC6A53 /* ViewModels */,
 				3AE19C122F141F1900DC6A53 /* Views */,
-				A5000004 /* App */,
-				A5000005 /* Models */,
-				A5000006 /* ViewModels */,
-				A5000007 /* Views */,
-				A5000008 /* Utilities */,
 			);
 			path = SnakeGame;
 			sourceTree = "<group>";
@@ -147,49 +126,6 @@
 				A3000001 /* SnakeGame.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A5000004 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				A2000001 /* SnakeGameApp.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		A5000005 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A2000002 /* Point.swift */,
-				A2000003 /* Direction.swift */,
-				A2000004 /* GameState.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A5000006 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				A2000005 /* GameViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		A5000007 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A2000006 /* GameView.swift */,
-				A2000007 /* GridView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A5000008 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A2000008 /* Color+Hex.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +156,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					A6000001 = {
 						CreatedOnToolsVersion = 15.0;
@@ -260,10 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000001 /* SnakeGameApp.swift in Sources */,
-				A1000002 /* Point.swift in Sources */,
-				A1000003 /* Direction.swift in Sources */,
-				A1000004 /* GameState.swift in Sources */,
 				3AE19C132F141F1900DC6A53 /* GameState.swift in Sources */,
 				3AE19C142F141F1900DC6A53 /* ControlPadView.swift in Sources */,
 				3AE19C152F141F1900DC6A53 /* Color+Hex.swift in Sources */,
@@ -275,10 +207,6 @@
 				3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */,
 				3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */,
 				3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */,
-				A1000005 /* GameViewModel.swift in Sources */,
-				A1000006 /* GameView.swift in Sources */,
-				A1000007 /* GridView.swift in Sources */,
-				A1000008 /* Color+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +249,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -340,6 +269,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -381,6 +311,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -393,6 +324,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;

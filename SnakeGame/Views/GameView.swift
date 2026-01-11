@@ -93,7 +93,7 @@ struct GameView: View {
                                     ControlPadView { direction in
                                         viewModel.changeDirection(direction)
                                     }
-                                    .padding(.trailing, 20)
+                                    .padding(.trailing, 80)
                                     .padding(.bottom, 80)
                                 }
                             }
