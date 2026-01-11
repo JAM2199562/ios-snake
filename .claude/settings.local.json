@@ -7,7 +7,9 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(claude plugin install:*)",
       "Skill(superpowers:writing-plans)",
-      "Bash(claude plugin:*)"
+      "Bash(claude plugin:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(swift package init:*)"
     ]
   }
 }
