@@ -3,6 +3,7 @@ import SwiftUI
 /// 游戏主界面
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
