@@ -101,7 +101,6 @@ struct GameView: View {
                     }
                     .gesture(swipeGesture)
                     .onTapGesture {
-                        print("🖱️ 屏幕点击！")
                         handleTap()
                     }
                 }
