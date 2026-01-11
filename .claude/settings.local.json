@@ -20,7 +20,10 @@
       "Bash(xcrun simctl:*)",
       "Bash(git restore:*)",
       "Skill(superpowers:requesting-code-review)",
-      "Bash(git rev-parse:*)"
+      "Bash(git rev-parse:*)",
+      "Skill(superpowers:verification-before-completion)",
+      "Bash(xcode-select:*)",
+      "Bash(sudo xcode-select:*)"
     ]
   }
 }
