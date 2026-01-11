@@ -41,11 +41,11 @@ struct GameView: View {
                                 VStack(spacing: 20) {
                                     Text("GAME OVER")
                                         .font(.system(size: 40, weight: .bold, design: .monospaced))
-                                        .foregroundColor(Color(hex: "00FF00"))
+                                        .foregroundColor(themeManager.currentTheme.textColor)
 
                                     Text("分数: \(viewModel.score)")
                                         .font(.system(size: 24, design: .monospaced))
-                                        .foregroundColor(Color(hex: "00FF00"))
+                                        .foregroundColor(themeManager.currentTheme.textColor)
 
                                     Button("重新开始") {
                                         viewModel.startGame()
