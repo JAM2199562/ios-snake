@@ -108,6 +108,10 @@ struct GameView: View {
             }
             .background(themeManager.currentTheme.backgroundColor)
         }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
+                .environmentObject(themeManager)
+        }
     }
 
     // MARK: - 手势处理
