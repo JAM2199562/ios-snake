@@ -141,6 +141,11 @@ class GameViewModel: ObservableObject {
         if checkCollision(at: newHead) {
             gameState = .gameOver
             stopTimer()
+
+            // 播放游戏结束音效和触觉反馈
+            SoundManager.shared.playGameOverSound()
+            HapticManager.shared.playHeavyImpact()
+
             return
         }
 
