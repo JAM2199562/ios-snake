@@ -26,7 +26,7 @@ struct GameView: View {
                 }
                 .padding()
                 .frame(height: 44)
-                .background(Color(hex: "000000"))
+                .background(themeManager.currentTheme.backgroundColor)
 
                 // 游戏网格区域
                 GeometryReader { geometry in
