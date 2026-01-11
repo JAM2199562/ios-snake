@@ -57,7 +57,9 @@ class GameViewModel: ObservableObject {
     private func startCountdown() {
         countdownNumber = 3
 
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] timer in
+        // 清理旧 Timer
+        countdownTimer?.invalidate()
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] timer in
             guard let self = self else {
                 timer.invalidate()
                 return
@@ -72,6 +74,7 @@ class GameViewModel: ObservableObject {
                     self.gameState = .running
                     self.startTimer()
                     timer.invalidate()
+                    self.countdownTimer = nil  // 清理引用
                 }
             }
         }
