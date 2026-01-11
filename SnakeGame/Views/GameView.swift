@@ -4,6 +4,7 @@ import SwiftUI
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
     @EnvironmentObject var themeManager: ThemeManager
+    @State private var showSettings = false
 
     var body: some View {
         ZStack {
