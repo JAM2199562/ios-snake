@@ -3,6 +3,8 @@ import SwiftUI
 /// 设置页面
 struct SettingsView: View {
     @EnvironmentObject var themeManager: ThemeManager
+    @ObservedObject var soundManager = SoundManager.shared
+    @ObservedObject var hapticManager = HapticManager.shared
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
