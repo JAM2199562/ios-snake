@@ -5,7 +5,7 @@ import Combine
 class GameViewModel: ObservableObject {
     // MARK: - 游戏配置常量
     let gridWidth = 20
-    let gridHeight = 30
+    let gridHeight = 25  // 从 30 减少到 25，为虚拟十字键留出空间
 
     // MARK: - Published 状态（自动触发 UI 更新）
     @Published var snake: [Point] = []
