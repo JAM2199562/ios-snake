@@ -23,7 +23,13 @@
       "Bash(git rev-parse:*)",
       "Skill(superpowers:verification-before-completion)",
       "Bash(xcode-select:*)",
-      "Bash(sudo xcode-select:*)"
+      "Bash(sudo xcode-select:*)",
+      "Bash(sips:*)",
+      "Bash(brew install:*)",
+      "Bash(magick:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push)",
+      "Skill(ccg:commit)"
     ]
   }
 }
