@@ -18,6 +18,7 @@ class GameViewModel: ObservableObject {
 
     // MARK: - 私有属性
     private var timer: AnyCancellable?
+    private var countdownTimer: Timer?
     private let gameSpeed: TimeInterval = 0.2
 
     // MARK: - 初始化

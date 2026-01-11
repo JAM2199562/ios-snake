@@ -18,7 +18,9 @@
       "Bash(chmod:*)",
       "Bash(./generate_xcode_project.sh:*)",
       "Bash(xcrun simctl:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Skill(superpowers:requesting-code-review)",
+      "Bash(git rev-parse:*)"
     ]
   }
 }
