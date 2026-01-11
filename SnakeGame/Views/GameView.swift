@@ -69,6 +69,19 @@ struct GameView: View {
                             }
                         }
 
+                        // 倒数动画
+                        if let countdown = viewModel.countdownNumber {
+                            ZStack {
+                                Color.black.opacity(0.7)
+
+                                Text("\(countdown)")
+                                    .font(.system(size: 80, weight: .bold, design: .monospaced))
+                                    .foregroundColor(themeManager.currentTheme.textColor)
+                                    .transition(.scale.combined(with: .opacity))
+                            }
+                            .ignoresSafeArea()
+                        }
+
                         // 虚拟十字键（仅在游戏进行中显示）
                         if viewModel.gameState == .running {
                             VStack {
