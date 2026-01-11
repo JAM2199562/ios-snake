@@ -32,10 +32,10 @@ struct GridView: View {
                     )
             }
 
-            // 食物：红色圆形
+            // 食物
             if let food = viewModel.food {
                 Circle()
-                    .fill(Color(hex: "FF0000"))
+                    .fill(themeManager.currentTheme.foodColor)
                     .frame(width: cellSize, height: cellSize)
                     .position(
                         x: CGFloat(food.x) * cellSize + cellSize / 2,
