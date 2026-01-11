@@ -5,64 +5,83 @@ struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
 
     var body: some View {
-        VStack(spacing: 0) {
-            // 顶部分数栏
-            HStack {
-                Text("分数: \(viewModel.score)")
-                    .font(.system(.title2, design: .monospaced))
-                    .foregroundColor(Color(hex: "00FF00"))
+        ZStack {
+            VStack(spacing: 0) {
+                // 顶部分数栏
+                HStack {
+                    Text("分数: \(viewModel.score)")
+                        .font(.system(.title2, design: .monospaced))
+                        .foregroundColor(Color(hex: "00FF00"))
 
-                Spacer()
-            }
-            .padding()
-            .frame(height: 44)
-            .background(Color(hex: "000000"))
+                    Spacer()
 
-            // 游戏网格区域
-            GeometryReader { geometry in
-                GridView(viewModel: viewModel, size: geometry.size)
-                    .gesture(swipeGesture)
-                    .onTapGesture {
-                        handleTap()
+                    // 临时开始按钮（调试用）
+                    Button("START") {
+                        print("🔘 按钮点击！")
+                        viewModel.startGame()
                     }
+                    .foregroundColor(Color(hex: "00FF00"))
+                    .font(.system(.body, design: .monospaced))
+                }
+                .padding()
+                .frame(height: 44)
+                .background(Color(hex: "000000"))
 
-                // 游戏结束遮罩
-                if viewModel.gameState == .gameOver {
+                // 游戏网格区域
+                GeometryReader { geometry in
                     ZStack {
-                        Color.black.opacity(0.7)
+                        GridView(viewModel: viewModel, size: geometry.size)
 
-                        VStack(spacing: 20) {
-                            Text("GAME OVER")
-                                .font(.system(size: 40, weight: .bold, design: .monospaced))
-                                .foregroundColor(Color(hex: "00FF00"))
+                        // 游戏结束遮罩
+                        if viewModel.gameState == .gameOver {
+                            ZStack {
+                                Color.black.opacity(0.7)
 
-                            Text("分数: \(viewModel.score)")
-                                .font(.system(size: 24, design: .monospaced))
-                                .foregroundColor(Color(hex: "00FF00"))
+                                VStack(spacing: 20) {
+                                    Text("GAME OVER")
+                                        .font(.system(size: 40, weight: .bold, design: .monospaced))
+                                        .foregroundColor(Color(hex: "00FF00"))
 
-                            Text("TAP TO RESTART")
-                                .font(.system(size: 16, design: .monospaced))
-                                .foregroundColor(Color(hex: "00FF00"))
-                                .opacity(0.7)
+                                    Text("分数: \(viewModel.score)")
+                                        .font(.system(size: 24, design: .monospaced))
+                                        .foregroundColor(Color(hex: "00FF00"))
+
+                                    Button("重新开始") {
+                                        viewModel.startGame()
+                                    }
+                                    .foregroundColor(Color(hex: "00FF00"))
+                                    .font(.system(size: 16, design: .monospaced))
+                                }
+                            }
+                        }
+
+                        // 开始提示
+                        if viewModel.gameState == .ready {
+                            ZStack {
+                                Color.black.opacity(0.5)
+
+                                VStack(spacing: 20) {
+                                    Text("TAP TO START")
+                                        .font(.system(size: 24, design: .monospaced))
+                                        .foregroundColor(Color(hex: "00FF00"))
+
+                                    Text("或点击右上角 START")
+                                        .font(.system(size: 12, design: .monospaced))
+                                        .foregroundColor(Color(hex: "00FF00"))
+                                        .opacity(0.7)
+                                }
+                            }
                         }
                     }
-                    .ignoresSafeArea()
-                }
-
-                // 开始提示
-                if viewModel.gameState == .ready {
-                    ZStack {
-                        Color.black.opacity(0.5)
-
-                        Text("TAP TO START")
-                            .font(.system(size: 24, design: .monospaced))
-                            .foregroundColor(Color(hex: "00FF00"))
+                    .gesture(swipeGesture)
+                    .onTapGesture {
+                        print("🖱️ 屏幕点击！")
+                        handleTap()
                     }
-                    .ignoresSafeArea()
                 }
             }
+            .background(Color(hex: "000000"))
         }
-        .background(Color(hex: "000000"))
     }
 
     // MARK: - 手势处理
@@ -86,7 +105,9 @@ struct GameView: View {
 
     /// 点击屏幕处理
     private func handleTap() {
+        print("🎮 handleTap 被调用！当前状态: \(viewModel.gameState)")
         if viewModel.gameState == .ready || viewModel.gameState == .gameOver {
+            print("🎮 启动游戏！")
             viewModel.startGame()
         }
     }
