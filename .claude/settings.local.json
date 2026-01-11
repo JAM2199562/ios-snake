@@ -16,7 +16,8 @@
       "Bash(git commit:*)",
       "Bash(ls:*)",
       "Bash(chmod:*)",
-      "Bash(./generate_xcode_project.sh:*)"
+      "Bash(./generate_xcode_project.sh:*)",
+      "Bash(xcrun simctl:*)"
     ]
   }
 }
