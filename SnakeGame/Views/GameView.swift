@@ -50,7 +50,7 @@ struct GameView: View {
                                     Button("重新开始") {
                                         viewModel.startGame()
                                     }
-                                    .foregroundColor(Color(hex: "00FF00"))
+                                    .foregroundColor(themeManager.currentTheme.textColor)
                                     .font(.system(size: 16, design: .monospaced))
                                 }
                             }
