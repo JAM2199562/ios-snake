@@ -64,12 +64,7 @@ struct GameView: View {
                                 VStack(spacing: 20) {
                                     Text("TAP TO START")
                                         .font(.system(size: 24, design: .monospaced))
-                                        .foregroundColor(Color(hex: "00FF00"))
-
-                                    Text("或点击右上角 START")
-                                        .font(.system(size: 12, design: .monospaced))
-                                        .foregroundColor(Color(hex: "00FF00"))
-                                        .opacity(0.7)
+                                        .foregroundColor(themeManager.currentTheme.textColor)
                                 }
                             }
                         }
