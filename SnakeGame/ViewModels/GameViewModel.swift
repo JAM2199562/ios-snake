@@ -22,7 +22,8 @@ class GameViewModel: ObservableObject {
 
     // MARK: - 初始化
     init() {
-        // 初始化时不启动游戏，等待用户触发
+        // 从 UserDefaults 读取最高分
+        highScore = UserDefaults.standard.integer(forKey: "highScore")
     }
 
     // MARK: - 公开方法
