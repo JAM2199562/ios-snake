@@ -16,14 +16,14 @@ struct GridView: View {
 
     var body: some View {
         ZStack {
-            // 背景：纯黑色（绿屏终端主题）
-            Color(hex: "000000")
+            // 背景
+            themeManager.currentTheme.backgroundColor
                 .ignoresSafeArea()
 
-            // 蛇身：荧光绿色方块
+            // 蛇身
             ForEach(viewModel.snake, id: \.self) { point in
                 Rectangle()
-                    .fill(Color(hex: "00FF00"))
+                    .fill(themeManager.currentTheme.snakeColor)
                     .cornerRadius(3) // 轻微圆角
                     .frame(width: cellSize, height: cellSize)
                     .position(
