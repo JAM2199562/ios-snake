@@ -156,8 +156,18 @@ class GameViewModel: ObservableObject {
         if newHead == food {
             // 吃到食物：增加分数，生成新食物，蛇身保持增长
             score += 10
+
+            // 更新最高分
+            if score > highScore {
+                highScore = score
+                UserDefaults.standard.set(highScore, forKey: "highScore")
+            }
+
             spawnFood()
-            // TODO: 触发音效和触觉反馈（Phase 3）
+
+            // 播放音效和触觉反馈
+            SoundManager.shared.playEatSound()
+            HapticManager.shared.playLightImpact()
         } else {
             // 没吃到食物：移除尾巴（保持蛇身长度不变）
             snake.removeLast()
