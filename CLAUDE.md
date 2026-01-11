@@ -25,8 +25,8 @@
 SnakeGame/
 ├── Models/          # Point, Direction, GameState
 ├── ViewModels/      # GameViewModel (核心逻辑)
-├── Views/           # GameView, GridView, ControlPadView
-├── Utilities/       # Theme, Color+Hex, Managers
+├── Views/           # GameView, GridView, ControlPadView, SettingsView
+├── Utilities/       # Theme, Color+Hex, SoundManager, HapticManager
 └── App/             # SnakeGameApp
 ```
 
@@ -40,89 +40,71 @@ SnakeGame/
 - 食物: `#FF0000` (红色圆形)
 
 **游戏配置**:
-- 网格: 20x30
+- 网格: 20x25（为虚拟十字键留出空间）
 - 速度: 0.2 秒/格
 - 初始长度: 3
 
 **布局**:
 - 顶部栏: 60pt（当前分数 + 最高分 + 设置）
-- 游戏网格: 20x25（为虚拟十字键留出空间）
+- 游戏网格: 占据剩余空间，底部避开虚拟十字键
 - 虚拟十字键: 右下角，60pt 圆心，透明度 0.6
 
 ---
 
-## 开发流程（当前已完成 Phase 1-3）
+## AI 工作流程要求
 
-### Phase 1: 核心游戏逻辑 ✅
-1. ✅ 设计文档和计划
-2. ✅ 创建 Xcode 项目结构
-3. ✅ 实现 Models 层（Point/Direction/GameState）
-4. ✅ 实现 GameViewModel 核心逻辑
-5. ✅ 实现基础 GridView 渲染
-6. ✅ 实现滑动手势控制
-7. ✅ 测试完整游戏流程
+### 必须使用的 Agents
 
-**验收标准**: ✅ 能用滑动手势玩完整游戏
-
-### Phase 2: UI/UX 完善 ✅
-1. ✅ 虚拟十字键控制（带暂停功能）
-2. ✅ 双主题系统（绿屏终端 + GameBoy）
-3. ✅ 游戏状态动画（倒数 3-2-1）
-4. ✅ 设置页面（主题切换）
-5. ✅ 主题持久化（UserDefaults）
-
-**验收标准**: ✅ 完整的像素风界面和双控制模式
-
-### Phase 3: 音效与反馈 ✅
-1. ✅ 音效系统（吃食物 + 游戏结束）
-2. ✅ 触觉反馈系统（轻触觉 + 重触觉）
-3. ✅ 最高分记录（UserDefaults 持久化）
-4. ✅ 音效/震动开关（设置页面）
-
-**验收标准**: ✅ 完整的感官反馈系统
-
-### 已实现的核心功能
-- 双控制模式：滑动手势 + 虚拟十字键
-- 暂停/恢复：虚拟十字键中央按钮
-- 双主题切换：绿屏终端 + GameBoy
-- 音效与触觉反馈（可配置开关）
-- 最高分记录与显示
-- 游戏区域优化（避开虚拟十字键）
-
----
-
-## 推荐 Agents
-
-**Phase 1 核心**:
+**开发阶段**:
 - `multi-platform-apps:ios-developer` - 所有 Swift/SwiftUI 代码实现
 - `multi-platform-apps:ui-ux-designer` - UI/UX 设计验证和优化
 
-**测试和审查**:
+**质量保证**:
 - `superpowers:test-driven-development` - 先写测试
-- `superpowers:verification-before-completion` - 验证功能
-- `superpowers:requesting-code-review` - 代码审查
+- `superpowers:verification-before-completion` - 验证功能后才能声称完成
+- `superpowers:requesting-code-review` - 完成主要功能后必须审查
 
-**Git 操作**:
+**版本控制**:
 - `zcf:git-commit` - 规范 commit message
+- ⚠️ **关键约束**: 除非用户明确要求，否则绝对不要执行 git commit/push/branch 操作
+
+### 工作流程检查清单
+
+在开始任何工作前，必须检查：
+- [ ] 是否有推荐的 Agent 可用？如果有，必须使用 Skill tool 调用
+- [ ] 是否需要验证？必须使用 verification-before-completion
+- [ ] 是否完成了主要功能？必须使用 requesting-code-review
+
+在声称任何完成状态前：
+- [ ] 已运行验证命令并看到输出
+- [ ] 已获得用户确认或有实际证据
+- [ ] 不使用"应该"、"可能"、"似乎"等词汇
 
 ---
 
 ## 相关文档
 
 - 完整设计: `docs/plans/2026-01-12-ios-snake-design.md`
-- Phase 1 实现计划: `docs/plans/2026-01-12-phase1-implementation.md`
-- Phase 2 完成报告: `docs/PHASE2_COMPLETION_REPORT.md`
-- Phase 3 实现计划: `docs/plans/2026-01-12-phase3-implementation.md`
+- 实现计划: `docs/plans/`
+- 项目状态: 查看 git log 或询问用户
 - 全局偏好: `~/.claude/CLAUDE.md`
-- 代码审查报告: 由 superpowers:code-reviewer 生成
 
-## 项目状态
+---
 
-**当前版本**: 1.0.0 - Phase 3 完成
-**测试状态**: 15/15 单元测试通过
-**运行状态**: 可在 iOS 模拟器运行
-**代码质量**: ⭐⭐⭐⭐☆ (4.6/5)
+## 违规记录与强化机制
 
-## 下一步（可选）
+**已知违规行为**:
+1. ❌ 未使用推荐的 Agents（直接编写代码而非调用 ios-developer agent）
+2. ❌ 添加过多表情符号（违反全局 CLAUDE.md 的简洁性要求）
+3. ❌ 将 CLAUDE.md 当作 changelog 使用（本次）
 
-Phase 4 优化与扩展功能可根据需要实现。
+**强化措施**:
+- 在每次开始工作时，重新阅读本文档的"AI 工作流程要求"部分
+- 遇到推荐 Agent 必须使用，无例外
+- 验证前不得声称完成
+- CLAUDE.md 仅用于 AI 指令，不记录进度
+
+**自检问题**:
+1. 我是否应该调用 Agent 而不是直接做？
+2. 我是否在没有证据的情况下声称完成？
+3. 我是否在修改不应该修改的文档类型？
