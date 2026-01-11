@@ -40,7 +40,16 @@ struct GameView: View {
                 // 游戏网格区域
                 GeometryReader { geometry in
                     ZStack {
-                        GridView(viewModel: viewModel, size: geometry.size)
+                        // 给 GridView 添加底部padding，避开虚拟十字键区域
+                        // 虚拟十字键高度 = 底部padding(80) + 中心到底部(30) + 上箭头offset(50) + 上箭头半径(20) = 180pt
+                        GridView(
+                            viewModel: viewModel,
+                            size: CGSize(
+                                width: geometry.size.width,
+                                height: geometry.size.height - 180
+                            )
+                        )
+                        .frame(width: geometry.size.width, height: geometry.size.height - 180, alignment: .top)
 
                         // 游戏结束遮罩
                         if viewModel.gameState == .gameOver {

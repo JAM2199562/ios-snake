@@ -18,6 +18,8 @@
 		3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C062F141F1900DC6A53 /* Point.swift */; };
 		3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C0F2F141F1900DC6A53 /* GameView.swift */; };
 		3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C022F141F1900DC6A53 /* SnakeGameApp.swift */; };
+		3AE19C202F14264500DC6A53 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C1F2F14264500DC6A53 /* SoundManager.swift */; };
+		3AE19C212F14264500DC6A53 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE19C1E2F14264500DC6A53 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		3AE19C0F2F141F1900DC6A53 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3AE19C102F141F1900DC6A53 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		3AE19C112F141F1900DC6A53 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3AE19C1E2F14264500DC6A53 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		3AE19C1F2F14264500DC6A53 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		A3000001 /* SnakeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnakeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +71,8 @@
 		3AE19C0A2F141F1900DC6A53 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3AE19C1E2F14264500DC6A53 /* HapticManager.swift */,
+				3AE19C1F2F14264500DC6A53 /* SoundManager.swift */,
 				3AE19C082F141F1900DC6A53 /* Color+Hex.swift */,
 				3AE19C092F141F1900DC6A53 /* Theme.swift */,
 			);
@@ -207,6 +213,8 @@
 				3AE19C1B2F141F1900DC6A53 /* Point.swift in Sources */,
 				3AE19C1C2F141F1900DC6A53 /* GameView.swift in Sources */,
 				3AE19C1D2F141F1900DC6A53 /* SnakeGameApp.swift in Sources */,
+				3AE19C202F14264500DC6A53 /* SoundManager.swift in Sources */,
+				3AE19C212F14264500DC6A53 /* HapticManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
