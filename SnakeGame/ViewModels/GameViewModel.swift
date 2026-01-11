@@ -13,6 +13,7 @@ class GameViewModel: ObservableObject {
     @Published var direction: Direction = .right
     @Published var gameState: GameState = .ready
     @Published var score: Int = 0
+    @Published var countdownNumber: Int? = nil
 
     // MARK: - 私有属性
     private var timer: AnyCancellable?
