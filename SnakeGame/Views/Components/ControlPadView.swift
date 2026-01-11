@@ -11,10 +11,25 @@ struct ControlPadView: View {
 
     var body: some View {
         ZStack {
-            // 中心圆底座
-            Circle()
-                .fill(themeManager.currentTheme.textColor.opacity(0.3))
-                .frame(width: 60, height: 60)
+            // 中心暂停按钮
+            Button(action: {
+                onPauseToggle()
+                isPausePressing = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    isPausePressing = false
+                }
+            }) {
+                ZStack {
+                    Circle()
+                        .fill(themeManager.currentTheme.textColor.opacity(isPausePressing ? 0.5 : 0.3))
+                        .frame(width: 60, height: 60)
+
+                    // 暂停图标（两条竖线）
+                    Image(systemName: "pause.fill")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(themeManager.currentTheme.textColor)
+                }
+            }
 
             // 上方向键
             DirectionButton(direction: .up, isPressed: pressedDirection == .up)
