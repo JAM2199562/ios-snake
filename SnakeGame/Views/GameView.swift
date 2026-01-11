@@ -134,9 +134,7 @@ struct GameView: View {
 
     /// 点击屏幕处理
     private func handleTap() {
-        print("🎮 handleTap 被调用！当前状态: \(viewModel.gameState)")
         if viewModel.gameState == .ready || viewModel.gameState == .gameOver {
-            print("🎮 启动游戏！")
             viewModel.startGame()
         }
     }
