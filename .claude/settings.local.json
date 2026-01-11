@@ -9,7 +9,11 @@
       "Skill(superpowers:writing-plans)",
       "Bash(claude plugin:*)",
       "Bash(xcodebuild:*)",
-      "Bash(swift package init:*)"
+      "Bash(swift package init:*)",
+      "Bash(open:*)",
+      "Bash(tree:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
