@@ -30,11 +30,16 @@ struct SettingsView: View {
                     }
                 }
 
+                Section(header: Text("反馈设置")) {
+                    Toggle("音效", isOn: $soundManager.isSoundEnabled)
+                    Toggle("触觉反馈", isOn: $hapticManager.isHapticEnabled)
+                }
+
                 Section(header: Text("关于")) {
                     HStack {
                         Text("版本")
                         Spacer()
-                        Text("1.0.0 - Phase 2")
+                        Text("1.0.0 - Phase 3")
                             .foregroundColor(.gray)
                     }
                 }
